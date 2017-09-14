@@ -1,0 +1,605 @@
+.icon-enterprise-seller, .icon-bd-title, .icon-golden-seller, .shop-icon, .icon-B, .icon-HK, .icon-SM, .icon-YY, .icon-LG, .icon-cod, .shop-coupon-trigger, .shop-coupon-trigger .arrow, .cart-checkbox label, .cart-logo a span, .cart-msg .msg-content, .cart-dialog .ks-dialog-close, .toggle, .arrow, .shop-coupon-trigger, .s-checkbox label, .cart-icon, .s-checkbox {
+    background: transparent url(//img.alicdn.com/tfs/TB1K2JqRpXXXXXHXFXXXXXXXXXX-800-600.png) no-repeat -9999px -9999px;
+    background-image: -webkit-image-set(url(//img.alicdn.com/tfs/TB1K2JqRpXXXXXHXFXXXXXXXXXX-800-600.png) 1x,url(//img.alicdn.com/tfs/TB1TS0BRpXXXXX4XXXXXXXXXXXX-800-600.png) 2x);
+    background-image: -moz-image-set(url(//img.alicdn.com/tfs/TB1K2JqRpXXXXXHXFXXXXXXXXXX-800-600.png) 1x,url(//img.alicdn.com/tfs/TB1TS0BRpXXXXX4XXXXXXXXXXXX-800-600.png) 2x);
+    background-image: -o-image-set(url(//img.alicdn.com/tfs/TB1K2JqRpXXXXXHXFXXXXXXXXXX-800-600.png) 1x,url(//img.alicdn.com/tfs/TB1TS0BRpXXXXX4XXXXXXXXXXXX-800-600.png) 2x);
+    background-image: -ms-image-set(url(//img.alicdn.com/tfs/TB1K2JqRpXXXXXHXFXXXXXXXXXX-800-600.png) 1x,url(//img.alicdn.com/tfs/TB1TS0BRpXXXXX4XXXXXXXXXXXX-800-600.png) 2x);
+}
+.icon-freegift, .lottery-tips .arrow, .float-bar-right, .promo-main .promo-activityp, .btn-edit-sku, .icon-announcement, .pre-promos, .pre-promos .arrow, .coupon-popup .ks-ext-close-x, .coupon-amount, .icon-ju11, .item-content .text-amount, .btn-switch-cart, .btn-switch-cart .txt, .promo-ask-btn, .icon-time, .item-icon-list .arrow, .ks-ext-close, .ks-overlay-close, .close, .icon, .cart-filters .active, .cart-filters .active a, .cart-sum .submit-btn, .btn-select-sku, .go-top, .price-promo .promo, .pipe-left, .pipe-right, .add-cart, .carousel .prev, .carousel .next, .group-checkout, .group-expand, .group .group-info .pipe, .select-sku, .select-sku span, .float-bar-wrapper .pipe, .submit-btn b, .float-bar-wrapper, .sku-edit-popup .add-cart, .selected-items-arrow, .icon-invalid, .icon-redemption, .sku-edit-popup .arrow, .small2big-popup .arrow {
+    background: transparent url(//gtd.alicdn.com/tps/i4/TB11ctfGVXXXXcmXFXXzEiYRXXX-271-453.png) no-repeat -9999px -9999px;
+}
+a {
+    color: #3c3c3c;
+    text-underline: none;
+}
+.cl, .clearfix {
+}
+ol, ul {
+    list-style: none;
+}
+fieldset, img {
+    border: 0;
+}
+.show{
+    display: block;
+}
+.cl:after, .clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#content, .header, .float-bar, #footer, .wp {
+    width: 990px;
+    margin: 0 auto;
+}
+#content {
+    clear: both;
+}
+.order-content{
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+
+/*头部*/
+.bundle-hd {
+    height: 28px;
+    padding-top: 9px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.th-chk, .td-chk {
+    width: 45px;
+}
+.bundle-hd .td-chk {
+    height: 24px;
+    float: left;
+}
+.bundle-hd .bd-title {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    color: #6c6c6c;
+    margin-right: 15px;
+    padding: 0 8px;
+    background: #e7e7e7;
+    position: relative;
+}
+.bundle-hd .bd-content .voucher-title img {
+    height: 16px;
+}
+.bundle-hd .bd-content .voucher-title {
+    margin-right: 0;
+    background: 0 0;
+}
+.bundle-hd .icon-bd-title {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    width: 11px;
+    margin-left: -6px;
+    height: 6px;
+    background-position: 0 -145px;
+}
+.bundle-hd .bd-content .goVoucher {
+    margin-left: 50px;
+}
+
+/*商品列表*/
+.item-holder{
+    position: relative;
+}
+.item-body {
+    background: #fcfcfc;
+    border-bottom: 1px solid #e7e7e7;
+    _zoom: 1;
+}
+.item-content .td {
+    float: left;
+    min-height: 119px;
+    _height: 119px;
+    overflow: hidden;
+    _overflow: visible;
+    _zoom: 1;
+}
+.item-content .td-chk {
+    position: relative;
+    overflow: hidden;
+}
+.td-inner {
+    padding-top: 20px;
+    _zoom: 1;
+}
+.cart-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+}
+.td-chk .cart-checkbox, .td-chk .s-checkbox {
+    margin: 0 10px 0 0;
+    float: right;
+}
+.cart-checkbox input {
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    top: -20px;
+}
+.cart-checkbox label {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-position: 0 0;
+    line-height: 200em;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cart-checkbox-checked label {
+    background-position: 0 -20px !important;
+}
+.th-item, .td-item {
+    width: 302px;
+}
+.item-content .td {
+    float: left;
+    min-height: 119px;
+    _height: 119px;
+    overflow: hidden;
+    _overflow: visible;
+    _zoom: 1;
+}
+/*商品图片*/
+.item-content .item-pic {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    float: left;
+    overflow: hidden;
+    background: #fff url(//gtd.alicdn.com/tps/i3/T1b1m3XkVpXXXXXXXX-32-32.gif) no-repeat 50% 50%;
+}
+.item-content .img-loaded {
+    background: #fff;
+}
+.item-content .item-pic a {
+    display: table-cell;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+.item-content .item-pic img {
+    max-height: 80px;
+    max-width: 80px;
+    vertical-align: middle;
+}
+/*名称信息列*/
+.td-item .item-info {
+    margin: -3px 0 0 91px;
+    padding-right: 25px;
+}
+.td-item .item-basic-info {
+    min-height: 40px;
+}
+.item-content .item-title {
+    font-size: 12px;
+    display: block;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    _height: expression(this.scrollHeight > 36 ? "36px" : "auto");
+}
+.item-info .promo-logos {
+    _clear: left;
+    zoom: 1;
+    overflow: hidden;
+    min-height: 26px;
+}
+.item-icon-list .item-icons {
+    margin-bottom: 3px;
+}
+.item-icon-list .item-icon {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    _display: inline;
+}
+/*商品规格*/
+.th-info, .td-info {
+    width: 172px;
+    padding-right: 20px;
+}
+.item-content .item-props {
+    padding: 16px 0;
+    min-height: 84px;
+    _height: 84px;
+    border: 1px dashed transparent;
+    position: relative;
+    _border-color: #EEF6FF;
+}
+.item-content .sku-line {
+    margin: 0 5px 0 15px;
+    color: #9c9c9c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*商品价格*/
+.th-price, .td-price {
+    width: 120px;
+}
+.item-content .td-price {
+    color: #9c9c9c;
+}
+.item-content .td-price .td-inner {
+    padding-top: 12px;
+}
+.item-content .price-content {
+    padding: 8px 0 0 10px;
+    line-height: 1;
+    width: 74px;
+}
+.item-content .td-price .price-line {
+    padding: 0 0 4px 0;
+}
+.item-content .price-now {
+    color: #3c3c3c;
+    font-weight: 700;
+    font-family: Verdana,Tahoma,arial;
+}
+/*商品数量*/
+.th-amount, .td-amount {
+    width: 120px;
+}
+.services-list .td-amount .number, .item-content .item-amount {
+    width: 77px;
+}
+.item-content .item-amount {
+    height: 25px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.item-content .item-amount a, .item-content .text-amount {
+    float: left;
+}
+.item-content .item-amount a {
+    display: block;
+    height: 23px;
+    width: 17px;
+    border: 1px solid #e5e5e5;
+    background: #f0f0f0;
+    text-align: center;
+    line-height: 23px;
+    color: #444;
+    position: absolute;
+    top: 0;
+}
+.item-content .item-amount .minus, .item-content .item-amount .no-minus {
+    border-right-color: transparent;
+    left: 0;
+}
+.item-content .item-amount .no-plus, .item-content .item-amount .no-minus {
+    color: #e5e5e5;
+}
+.item-content .text-amount {
+    width: 39px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
+    background-position: -75px -375px;
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    top: 0;
+}
+.item-content .item-amount .plus, .item-content .item-amount .no-plus {
+    border-left-color: transparent;
+    right: 0;
+}
+/*总价*/
+.item-content .td-sum {
+    color: #f40;
+    font-weight: 700;
+}
+.item-content .td-sum .td-inner {
+    padding-top: 16px;
+}
+.number, .price {
+    font-family: Verdana,Tahoma,arial;
+}
+.th-sum, .td-sum {
+    width: 105px;
+}
+/*操作列*/
+.th-op, .td-op {
+    width: 84px;
+    padding: 0 0 0 15px;
+}
+.combo-order-op a, .combo-op a, .item-content .td-op .btn-fav, .item-content .td-op .J_Del {
+    display: block;
+}
+.item-content .td-op a {
+    padding-bottom: 3px;
+}
+/*底部*/
+.float-bar-holder {
+    position: relative;
+    height: 50px;
+}
+.fixed-bottom {
+    bottom: -1px;
+    z-index: 9999;
+}
+.float-bar-right, .float-bar-wrapper {
+    background: #e5e5e5;
+}
+.float-bar-wrapper {
+    height: 50px;
+    overflow: hidden;
+    width: 990px;
+}
+/*全选*/
+.select-all {
+    cursor: pointer;
+    _margin-top: -2px;
+}
+.float-bar .select-all {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 5px;
+}
+.cart-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+}
+.select-all .cart-checkbox {
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.cart-checkbox input {
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    top: -20px;
+}
+.cart-checkbox label {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-position: 0 0;
+    line-height: 200em;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cart-checkbox-checked label {
+    background-position: 0 -20px !important;
+}
+/*操作按钮*/
+.float-bar .operations {
+    float: left;
+    line-height: 50px;
+    height: 50px;
+}
+.float-bar .operations a {
+    margin-left: 25px;
+    float: left;
+}
+/*右侧*/
+.float-bar-right, .float-bar-wrapper {
+    background: #e5e5e5;
+}
+.float-bar-right {
+    float: right;
+    z-index: 4;
+}
+.float-bar .amount-sum, .float-bar .price-sum {
+    height: 48px;
+    color: #3c3c3c;
+}
+.float-bar .amount-sum {
+    cursor: pointer;
+}
+.float-bar .txt {
+    line-height: 48px;
+}
+.float-bar .price-sum strong, .float-bar .amount-sum em, .float-bar .price-sum .txt, .float-bar .amount-sum .txt {
+    float: left;
+}
+.float-bar .amount-sum em, .float-bar .price-sum .price em {
+    color: #f40;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: tohoma,arial;
+}
+.float-bar .price-sum strong, .float-bar .amount-sum em, .float-bar .price-sum .txt, .float-bar .amount-sum .txt {
+    float: left;
+}
+.float-bar .amount-sum em {
+    line-height: 50px;
+    padding: 0 5px;
+}
+.float-bar .amount-sum .arrow-box {
+    float: left;
+}
+.selected-items-arrow {
+    position: absolute;
+    z-index: 10002;
+    margin-left: -1px;
+    background-position: -95px -75px;
+    width: 14px;
+    height: 7px;
+}.selected-items-arrow {
+     top: 0;
+     display: none;
+ }
+.float-bar .amount-sum .arrow {
+    display: inline-block;
+    width: 5px;
+    height: 6px;
+    background-position: 0 -115px;
+    margin: 21px 10px 0 6px;
+}
+.float-bar .amount-sum, .float-bar .price-sum, .float-bar .btn-area {
+    float: left;
+}
+.float-bar .amount-sum, .float-bar .price-sum {
+    height: 48px;
+    color: #3c3c3c;
+}
+.float-bar .price-sum .price {
+    color: #f40;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 48px;
+    font-family: Arial;
+    vertical-align: middle;
+}
+.float-bar .price-sum .price em {
+    font-weight: 700;
+    font-size: 22px;
+    padding: 0 3px;
+}
+.total-symbol {
+    font-size: 12px;
+    font-weight: 400;
+}
+.float-bar .total-symbol {
+    font-size: 14px;
+    font-family: verdana;
+}
+/*结算*/
+.float-bar .submit-btn {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    background: #f40;
+    text-align: center;
+    font-family: 'Lantinghei SC','Microsoft Yahei';
+    font-size: 20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.float-bar .combine-not-supported:link, .float-bar .combine-not-supported:hover, .float-bar .submit-btn-disabled:link, .float-bar .submit-btn-disabled:hover {
+    background: #B0B0B0;
+    color: #fff;
+    border-left: 1px solid #e7e7e7;
+    width: 119px;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+/*遮罩*/
+.ks-dialog-mask {
+    background: #000;
+    background: rgba(0,0,0,.6);
+    -ms-filter: "alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    z-index: 999997;
+}
+/*弹框*/
+.ks-overlay {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+.cart-dialog {
+    background: #ccc;
+    background: rgba(0,0,0,.2);
+    padding: 3px;
+    z-index: 999998;
+}
+.cart-dialog .ks-dialog-close {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+    background-position: -60px -20px;
+    right: 23px;
+    top: 23px;
+    z-index: 999999;
+}
+.cart-dialog .ks-dialog-close span {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.cart-dialog .ks-dialog-content {
+    border: 1px solid #aeaeae;
+    padding: 20px 20px 20px 30px;
+    background: #fff;
+}
+.cart-dialog .ks-dialog-header {
+    font-size: 14px;
+    color: #3c3c3c;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.cart-dialog .ks-dialog-footer {
+    margin-top: 20px;
+}
+.dialog-btn {
+    border: 1px solid #52a0e5;
+    width: 58px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    border-radius: 1px;
+    background: #52a0e5;
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.dialog-cancel {
+    background: #fff;
+    border-color: #d9d9d9;
+    color: #3c3c3c;
+}
+
+
+@media only screen and (min-width: 1441px) {
+    .cart-taobao .th-chk, .cart-taobao .td-chk {
+        width: 50px;
+    }
+    .cart-taobao .th-item, .cart-taobao .td-item {
+        width: 342px;
+    }
+    .cart-taobao .th-info, .cart-taobao .td-info {
+        width: 212px;
+        padding-right: 40px;
+    }
+    .cart-taobao .th-price, .cart-taobao .td-price {
+        width: 130px;
+    }
+    .cart-taobao .th-amount, .cart-taobao .td-amount {
+        width: 120px;
+    }
+    .cart-taobao .th-op, .cart-taobao .td-op {
+        width: 119px;
+        padding: 0 0 0 30px;
+    }
+    .cart-taobao .th-sum, .cart-taobao .td-sum {
+        width: 140px;
+    }
+}

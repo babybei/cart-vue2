@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>购物车--淘宝</title>
+    <link rel="stylesheet" href="https://g.alicdn.com/??kg/global-util/1.0.3/index-min.css,kg/tb-nav/2.4.1/index-min.css"/>
+    <link rel="stylesheet" href="cart.css"/>
+</head>
+<body>
+    <div id="app">
+        <!--遮罩-->
+        <div style="width: 100%; left: 0px; top: 0px; height: 100%; position: fixed;" class="ks-dialog-mask" v-if="delFlag"></div>
+        <div id="content">
+            <div class="order-content">
+                <div class="bundle-hd">
+                    <div class="td-chk"></div>
+                    <div class="bd-content">
+                        <div class="bd-title voucher-title">
+                            <img src="https://gw.alicdn.com/tfs/TB111ErRFXXXXanXXXXXXXXXXXX-116-32.png">
+                            <i class="icon-bd-title"></i>
+                        </div>
+                        <span>9.11-9.13每满100减5, 上不封顶</span>
+                        <a class="J_GoVoucher goVoucher " href="#" target="_blank">去凑单 &gt;</a>
+                    </div>
+                </div>
+
+                <div class="bundle-main">
+                    <!--商品输出列表-->
+                    <div class="item-holder" v-for="(item,index) in productList">
+                        <div class="item-body">
+                            <ul class="item-content clearfix">
+                                <li class="td td-chk">
+                                    <div class="td-inner">
+                                        <div class="cart-checkbox" v-bind:class="{'cart-checkbox-checked':item.checked}">   <!--v-bind:class="添加不覆盖，值是数组或者object"-->
+                                            <input class="J_CheckBoxItem" v-bind:id="item.pid" type="checkbox" v-bind:name="'item'+item.pid" v-model="item.pid">
+                                            <label v-bind:for="item.pid" @click="selectedProduct(item)">勾选商品</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-item">
+                                    <div class="td-inner">
+                                        <div class="item-pic img-loaded">
+                                            <a href="#" target="_blank" data-title="{{item.pname}}">
+                                                <img v-bind:src="item.pimg" class="itempic">
+                                            </a>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="item-basic-info">
+                                                <a href="#" target="_blank" title="{{item.pname}}" class="item-title">{{item.pname}}}</a>
+                                            </div>
+                                            <div class="item-other-info">
+                                                <div class="promo-logos"></div>
+                                                <div class="item-icon-list clearfix">
+                                                    <div class="item-icons item-icons-fixed ">
+                                                        <span class="item-icon item-icon-0" title="支持信用卡支付"><img src="//assets.alicdn.com/sys/common/icon/trade/xcard.png" alt=""></span>
+                                                        <a href="//service.tmall.com/support/tmall/8306291.htm?spm=a1z0d.6639537.1997196601.8.m9aod6" target="_blank" class="item-icon" title="0首付，慢慢还，拥有所爱，无需等待！">
+                                                            <img src="//img.alicdn.com/tps/TB1GnsWJXXXXXbCXpXXXXXXXXXX-43-16.png" alt="">
+                                                        </a>
+                                                        <a href="//www.taobao.com/go/act/315/xfzbz_rsms.php?ad_id=&amp;am_id=130011830696bce9eda3&amp;cm_id=&amp;pm_id=" target="_blank" class="item-icon" title="消费者保障服务，卖家承诺商品如实描述">
+                                                            <img src="//img.alicdn.com/tps/i3/T1bnR4XEBhXXcQVo..-14-16.png" alt="">
+                                                        </a>
+                                                        <a href="//xiaobao.taobao.com/contract/item_contract_detail.htm?scm=1010.100.100.1&amp;contract_id=2&amp;item_id=538114743318" target="_blank" class="item-icon" title="15天退货，退货邮费买家承担">
+                                                            <img src="//img.alicdn.com/tps/i2/TB1XY_zGpXXXXbeXXXXAz6UFXXX-16-16.png" alt="">
+                                                        </a>
+                                                        <a href="//xiaobao.taobao.com/contract/item_contract_detail.htm?scm=1010.100.100.3&amp;contract_id=3&amp;item_id=538114743318" target="_blank" class="item-icon" title="1次破损补寄">
+                                                            <img src="//img.alicdn.com/tps/i1/TB1skruGpXXXXagXFXXAz6UFXXX-16-16.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-info">
+                                    <div class="item-props item-props-can">
+                                        <p v-for="type in item.ptype" class="sku-line">{{type.name}}</p>
+                                    </div>
+                                </li>
+                                <li class="td td-price">
+                                    <div class="td-inner">
+                                        <div class="item-price">
+                                            <div class="price-content">
+                                                <div class="price-line">
+                                                    <em class="price-now" tabindex="0">{{item.pprict|formatMoney}}</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-amount">
+                                    <div class="td-inner">
+                                        <div class="amount-wrapper">
+                                            <div class="item-amount">
+                                                <a href="#" class="minus" @click="changeMoney(item,-1)">-</a>
+                                                <input type="text" v-model="item.pnum" class="text text-amount" data-max="6517" data-now="1" autocomplete="off">
+                                                <a href="#" class="plus" v-on:click="changeMoney(item,1)">+</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="td td-sum">
+                                    <div class="td-inner">
+                                        <em tabindex="0" class="number">{{item.pprict*item.pnum|money('元')}}</em>
+                                    </div>
+                                </li>
+                                <li class="td td-op">
+                                    <div class="td-inner">
+                                        <!--<a title="移入收藏夹" class="btn-fav" href="#">移入收藏夹</a>-->
+                                        <a href="javascript:;" class="J_Del" @click="delConfirm(item)">删除</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="float-bar clearfix fixed-bottom" style="display: flex;">
+            <div class="float-bar-wrapper">
+                <div class="select-all" @click="checkallItem">
+                    <div class="cart-checkbox" :class="{'cart-checkbox-checked':checkall}">
+                        <input class="J_CheckBoxShop" id="J_SelectAllCbx2" type="checkbox" name="select-all" value="true">
+                        <label for="J_SelectAllCbx2">勾选购物车内所有商品</label>
+                    </div>
+                    &nbsp;全选
+                </div>
+                <div class="operations">
+                    <a href="#" hidefocus="true" class="J_DeleteSelected">删除</a>
+                    <a href="#" hidefocus="true" class="J_BatchFav">移入收藏夹</a>
+                    <a href="#" hidefocus="true" class="J_BatchShare">分享</a>
+                </div>
+                <div class="float-bar-right">
+                    <div id="J_ShowSelectedItems" class="amount-sum">
+                        <span class="txt">已选商品</span>
+                        <em id="J_SelectedItemsCount">0</em>
+                        <span class="txt">件</span>
+                        <div class="arrow-box">
+                            <span class="selected-items-arrow"></span>
+                            <span class="arrow"></span>
+                        </div>
+                    </div>
+                    <div class="price-sum">
+                        <span class="txt">合计（不含运费）：</span>
+                        <strong class="price">
+                            <em id="J_Total"><span class="total-symbol">&nbsp;</span>{{totalPrice|money('元')}}</em>
+                        </strong>
+                    </div>
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算">
+                            <span>结&nbsp;算</span><b></b>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--弹框-->
+        <div class="ks-dialog ks-overlay cart-dialog cart-dialog-confirm" tabindex="0" role="dialog" v-bind:style="{width: '374px', left:screenLeft+'px', top:screenTop+'px'}" v-if="delFlag">
+            <a href="javascript:void('close')" class="ks-dialog-close ks-overlay-close" role="button" @click="delFlag=false">
+                <span class="ks-dialog-close-x ks-overlay-close-x">close</span>
+            </a>
+            <div class="ks-dialog-content ks-overlay-content">
+                <div class="ks-dialog-header ks-overlay-header">删除宝贝</div>
+                <div class="ks-dialog-body ks-overlay-body">确认要删除该宝贝吗？</div>
+                <div class="ks-dialog-footer ks-overlay-footer">
+                    <a href="javascript:void(0)" class="dialog-btn J_DialogConfirmBtn" @click="delProduct">确&nbsp;定</a>
+                    <a href="javascript:void(0)" class="dialog-btn dialog-cancel J_DialogCancelBtn" @click="delFlag=false">关&nbsp;闭</a>
+                </div>
+            </div>
+            <div tabindex="0"></div>
+        </div>
+
+    </div>
+    <script src="js/lib/vue.min.js"></script>
+    <script src="js/lib/vue-resource.min.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -230,6 +230,9 @@ li, ul {
     color: #666;
     background: #fff;
 }
+.order-address .addr-def .defaultTip,.order-address .addr-set.addr-active .setDefault {
+     display: block
+}
 .order-address .addr-def .setDefault, .order-address .addr4tip, .order-address .showAllAddr, .order-address .update-4address-hint-mask {
     display: none;
 }
@@ -264,6 +267,9 @@ li, ul {
     border-radius: 0 0 2px 2px;
     background: url(//img.alicdn.com/tps/i2/T1zRuMXA0aXXb5sY6b-227-7.png) 50% 100% no-repeat;
     z-index: 1;
+}
+.order-address .addr .setDefault:hover {
+    color: #c97
 }
 /*查看更多*/
 #more{

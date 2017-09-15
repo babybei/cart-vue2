@@ -61,7 +61,8 @@
                         </div>
                         <div class="list">
 
-                            <div class="addr suggest-address" v-bind:class="{'addr-cur addr-def':address.isDefault}" v-for="address in filterAddress">
+                            <div class="addr suggest-address" v-bind:class="[{'addr-def':address.isDefault},{'addr-cur':index==currentIndex},{'addr-set':!address.isDefault&&index==currentIndex},{'addr-active':index==hoverIndex}]" v-for="(address,index) in filterAddress"
+                                 @click="currentIndex=index" @mouseenter="hoverIndex=index" @mouseleave="hoverIndex=-1">
                                 <div class="inner">
                                     <div class="addr-hd" v-bind:title="address.provName+' '+address.cityName+' ('+address.userName+'收)'">
                                         <span class="prov">{{address.provName}}</span>
@@ -82,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="curMarker"></div>
-                                <div class="setDefault">设为默认</div>
+                                <div class="setDefault" @click="setDefault(address.addressId)">设为默认</div>
                                 <div class="defaultTip">默认地址</div>
                                 <div class="option"></div>
                             </div>
@@ -97,7 +98,7 @@
 
                         </div>
                         <div id="more" class="more-down">
-                            <p>more<img src="img/down.png"/> </p>
+                            <p @click="limitNum=addressList.length">more<img src="img/down.png"/> </p>
                         </div>
                     </div>
                     <!--选择配送方式-->
@@ -108,7 +109,7 @@
                         </div>
 
                         <div class="list">
-                            <div class="addr suggest-address addr-cur addr-def">
+                            <div class="addr suggest-address" v-bind:class="{'addr-cur addr-def':shipingMethod==1}" @click="shipingMethod=1">
                                 <div class="inner" style="height: 76px; text-align: center; padding-top: 21px;">
                                     <h1>标准配送</h1>
                                     <h2>Free</h2>
@@ -116,7 +117,7 @@
                                 <div class="curMarker"></div>
                                 <div class="option"></div>
                             </div>
-                            <div class="addr suggest-address">
+                            <div class="addr suggest-address" v-bind:class="{'addr-cur addr-def':shipingMethod==2}" @click="shipingMethod=2">
                                 <div class="inner" style="height: 76px; text-align: center; padding-top: 21px;">
                                     <h1>高级配送</h1>
                                     <h2>180</h2>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择配送地址</title>
+    <link rel="stylesheet" href="https://g.alicdn.com/??kg/global-util/1.0.3/index-min.css,kg/tb-nav/2.4.1/index-min.css"/>
+    <link rel="stylesheet" href="address.css"/>
+</head>
+<body>
+    <div id="mallPage">
+        <!--头部-->
+        <div id="header">
+            <div class="headerLayout">
+                <div class="headerCon">
+                    <div class="header-extra">
+                        <div class="stepbar-box">
+                            <ol class="order-stepbar stepbar-5">
+                                <li class="step-first">
+                                    <div class="step-done">
+                                        <div class="step-name">查看购物车</div>
+                                        <div class="step-no"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="step-name">拍下商品</div>
+                                        <div class="step-no">2</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="step-name">付款到支付宝</div>
+                                        <div class="step-no">3</div>
+                                    </div></li>
+                                <li>
+                                    <div>
+                                        <div class="step-name">确认收货</div>
+                                        <div class="step-no">4</div>
+                                    </div></li>
+                                <li class="step-last">
+                                    <div>
+                                        <div class="step-name">评价</div>
+                                        <div class="step-no">5</div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--内容-->
+        <div id="content">
+            <div id="App">
+                <div class="page page-main">
+                    <!--地址-->
+                    <div class="order-address">
+                        <div class="order-title">
+                            <hr/>
+                            <h2>选择收货地址</h2>
+                        </div>
+                        <div class="list">
+
+                            <div class="addr suggest-address" v-bind:class="{'addr-cur addr-def':address.isDefault}" v-for="address in filterAddress">
+                                <div class="inner">
+                                    <div class="addr-hd" v-bind:title="address.provName+' '+address.cityName+' ('+address.userName+'收)'">
+                                        <span class="prov">{{address.provName}}</span>
+                                        <span class="city">{{address.cityName}}</span>
+                                        <span>（</span>
+                                        <span class="name">{{address.userName}}</span>
+                                        <span> 收）</span>
+                                    </div>
+                                    <div class="addr-bd" v-bind:title="address.distName+address.townName+' '+address.streetName">
+                                        <span class="dist">{{address.distName}}</span>
+                                        <span class="town">{{address.townName}}</span>
+                                        <span class="street">{{address.streetName}}</span>
+                                        <span class="phone">{{address.tel}}</span>
+                                        <span class="last">&nbsp;</span>
+                                    </div>
+                                    <div class="addr-toolbar">
+                                        <a href="#" title="修改地址" class="modify">修改</a>
+                                    </div>
+                                </div>
+                                <div class="curMarker"></div>
+                                <div class="setDefault">设为默认</div>
+                                <div class="defaultTip">默认地址</div>
+                                <div class="option"></div>
+                            </div>
+
+                            <div class="addr suggest-address">
+                                <div class="inner" style="height: 76px; text-align: center; padding-top: 21px;">
+                                    <img src="img/add.png" alt=""/>
+                                    <p>添加新地址</p>
+                                </div>
+                                <div class="option"></div>
+                            </div>
+
+                        </div>
+                        <div id="more" class="more-down">
+                            <p>more<img src="img/down.png"/> </p>
+                        </div>
+                    </div>
+                    <!--选择配送方式-->
+                    <div class="order-address order-send">
+                        <div class="order-title">
+                            <hr/>
+                            <h2>选择配送方式</h2>
+                        </div>
+
+                        <div class="list">
+                            <div class="addr suggest-address addr-cur addr-def">
+                                <div class="inner" style="height: 76px; text-align: center; padding-top: 21px;">
+                                    <h1>标准配送</h1>
+                                    <h2>Free</h2>
+                                </div>
+                                <div class="curMarker"></div>
+                                <div class="option"></div>
+                            </div>
+                            <div class="addr suggest-address">
+                                <div class="inner" style="height: 76px; text-align: center; padding-top: 21px;">
+                                    <h1>高级配送</h1>
+                                    <h2>180</h2>
+                                </div>
+                                <div class="curMarker"></div>
+                                <div class="option"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/lib/vue.min.js"></script>
+    <script src="js/lib/vue-resource.min.js"></script>
+    <script src="js/address.js"></script>
+</body>
+</html>

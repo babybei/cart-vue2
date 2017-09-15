@@ -482,12 +482,13 @@ fieldset, img {
     font-family: verdana;
 }
 /*结算*/
-.float-bar .submit-btn {
+.float-bar .submit-btn-disabled {
     display: inline-block;
     width: 120px;
     height: 50px;
     line-height: 50px;
-    background: #f40;
+    background: #B0B0B0;
+    color: #fff;
     text-align: center;
     font-family: 'Lantinghei SC','Microsoft Yahei';
     font-size: 20px;
@@ -498,12 +499,23 @@ fieldset, img {
     text-decoration: none;
     cursor: pointer;
 }
-.float-bar .combine-not-supported:link, .float-bar .combine-not-supported:hover, .float-bar .submit-btn-disabled:link, .float-bar .submit-btn-disabled:hover {
-    background: #B0B0B0;
+.float-bar .combine-not-supported:link, .float-bar .combine-not-supported:hover {
+    background: #f40;
     color: #fff;
     border-left: 1px solid #e7e7e7;
     width: 119px;
     cursor: not-allowed;
+    text-decoration: none;
+}
+.submit-btn-disabled:hover{
+    cursor: not-allowed;
+}
+.float-bar .submit-btn, .float-bar .submit-btn:hover{
+    background: #f40;
+    color: #fff;
+    border-left: 1px solid #e7e7e7;
+    width: 119px;
+    cursor: pointer;
     text-decoration: none;
 }
 /*遮罩*/
